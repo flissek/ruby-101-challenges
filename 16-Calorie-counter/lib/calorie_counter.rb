@@ -17,5 +17,8 @@ MEALS = {
 
 def calorie_counter(order)
   # TODO: calculate the total amount of calories for the order
-
+  order.each.map { |x| CALORIES[x]}
+     .inject(0) { |sum, x| sum + x }
 end
+
+
